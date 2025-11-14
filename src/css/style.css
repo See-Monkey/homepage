@@ -61,3 +61,50 @@ h6 {
 /* ============ global ============ */
 :root {
 }
+
+/* ============ images ============ */
+
+.headerImg {
+  width: 400px;
+  height: 400px;
+}
+
+.headerIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.cardImg {
+  width: 200px;
+  height: 200px;
+}
+
+.cardIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.contactIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.footerIcon {
+  width: 44px;
+  height: 44px;
+}
+
+.footerImg {
+  width: 533px;
+  height: 400px;
+}
+
+/* ============ header ============ */
+
+/* ============ main ============ */
+
+/* ============ footer ============ */
+
+/* ============ tablet ============ */
+
+/* ============ desktop ============ */

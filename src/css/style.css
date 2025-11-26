@@ -138,15 +138,17 @@ h3 {
 .footerImg {
   width: min(100%, 576px);
   height: auto;
+  box-shadow: 2px 2px 4px var(--slate);
 }
 
 /* ============ header ============ */
 header {
   background: linear-gradient(
-    170deg,
+    173deg,
     var(--green) 0%,
     var(--l-green) 50%,
-    white 50%,
+    var(--silver) 50%,
+    white 50.5%,
     white 100%
   );
   display: flex;
@@ -170,6 +172,13 @@ header {
   bottom: 80px;
   text-align: center;
   width: 90%;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .headerTitle {
@@ -275,6 +284,7 @@ footer {
 }
 
 .footerText {
+  max-width: 440px;
 }
 
 .contact {
@@ -311,11 +321,74 @@ footer {
 
 /* ============ tablet ============ */
 @media (min-width: 576px) {
+  .headerContainer {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .headerContainer h1 {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    text-align: right;
+  }
+
+  .headerContent {
+    display: block;
+    margin-top: 90px;
+    margin-left: -240px;
+    padding: 15px;
+    padding-top: 60px;
+    background-color: var(--silver);
+    box-shadow: 2px 2px 6px var(--slate);
+  }
+
+  .headerImg {
+    position: relative;
+    width: min(500px, 50%);
+    height: auto;
+  }
+
+  .float {
+    width: 250px;
+    height: 260px;
+    float: left;
+  }
+
+  .headerTitle {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .mainTitle {
+    align-self: flex-start;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .headerLinks {
+    display: none;
+  }
+
   .projects {
     margin: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
     gap: 35px 15px;
+  }
+
+  .footerContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footerContent {
+    min-width: 300px;
+  }
+
+  .footerTitle {
+    text-align: left;
   }
 
   .phone img {
@@ -325,10 +398,57 @@ footer {
   .email img {
     display: block;
   }
+
+  .footerImg {
+    width: min(45%, 576px);
+    height: 90%;
+    object-fit: fill;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 750px) {
+  .headerContainer h1 {
+    right: 65px;
+    text-align: right;
+  }
+
+  .float {
+    height: 300px;
+  }
 }
 
 /* ============ desktop ============ */
 @media (min-width: 1025px) {
+  .headerContainer {
+    padding: 40px;
+  }
+
+  .headerContainer h1 {
+    position: absolute;
+    top: 450px;
+    left: 140px;
+    text-align: left;
+  }
+
+  .headerContent {
+    display: flex;
+    margin-left: -20px;
+    padding: 30px 20px 10px 30px;
+  }
+
+  .float {
+    display: none;
+  }
+
+  .headerLinks {
+    display: flex;
+    align-self: flex-end;
+    padding-right: 20px;
+    margin-bottom: 10px;
+  }
+
   .projects {
     margin: 0 20px;
     display: grid;

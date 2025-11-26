@@ -83,11 +83,30 @@ body {
   margin-right: auto;
 }
 
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ledger", "Times New Roman", Times, serif;
+}
+
 /* ============ images ============ */
 
 .headerImg {
   width: min(400px, 80%);
   height: auto;
+  box-shadow: 2px 2px 4px var(--slate);
 }
 
 .headerIcon {
@@ -142,9 +161,19 @@ header {
   max-width: 1200px;
   padding: 15px;
   gap: 15px;
+  position: relative;
+}
+
+.headerContainer h1 {
+  color: var(--silver);
+  position: relative;
+  bottom: 80px;
+  text-align: center;
+  width: 90%;
 }
 
 .headerTitle {
+  margin-top: -70px;
 }
 
 .headerText {
@@ -152,6 +181,8 @@ header {
 
 .headerLinks {
   display: flex;
+  gap: 15px;
+  margin-bottom: 60px;
 }
 
 /* ============ main ============ */
@@ -162,13 +193,16 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
   padding: 15px;
+  padding-bottom: 120px;
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 35px 15px;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  flex-direction: column;
+  gap: 35px;
 }
 
 .card {
@@ -179,11 +213,13 @@ main {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 2px 2px 6px var(--slate);
+  padding-bottom: 60px;
 }
 
 .cardText {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   align-items: center;
   width: 85%;
 }
@@ -193,6 +229,7 @@ main {
   align-items: center;
   gap: 10px;
   width: 100%;
+  padding: 10px 0;
 }
 
 .cardHeader h3 {
@@ -200,9 +237,23 @@ main {
   margin-right: auto;
 }
 
+.cardHeader a {
+  padding: 0 15px;
+}
+
+.cardHeader button {
+  background-color: transparent;
+  border: none;
+}
+
+.cardHeader button:hover {
+  cursor: pointer;
+}
+
 /* ============ footer ============ */
 footer {
   background: linear-gradient(0deg, var(--green) 0%, var(--l-green) 100%);
+  padding-top: 15px;
 }
 
 .footerContainer {
@@ -238,20 +289,59 @@ footer {
   gap: 10px;
 }
 
+.phone img {
+  display: none;
+}
+
 .email {
   display: flex;
   gap: 10px;
 }
 
+.email img {
+  display: none;
+}
+
 .footerLinks {
   display: flex;
   justify-content: center;
+  gap: 15px;
+  padding-bottom: 60px;
 }
 
 /* ============ tablet ============ */
 @media (min-width: 576px) {
+  .projects {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+    gap: 35px 15px;
+  }
+
+  .phone img {
+    display: block;
+  }
+
+  .email img {
+    display: block;
+  }
 }
 
 /* ============ desktop ============ */
 @media (min-width: 1025px) {
+  .projects {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 30px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .projects {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px 30px;
+  }
 }
